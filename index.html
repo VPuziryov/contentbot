@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ContentBot™ — AI-помощник для постов</title>
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '3153750001397422');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=3153750001397422&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Facebook Pixel Code -->
+
+  <script>
+    function trackCheckoutClick() {
+      if (typeof fbq === 'function') {
+        fbq('track', 'InitiateCheckout');
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #f5f6fa;
+      color: #111;
+      text-align: center;
+    }
+    header {
+      padding: 20px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .hero {
+      background: white;
+      padding: 40px 20px;
+      border-radius: 16px;
+      margin: 20px auto;
+      max-width: 480px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+    .hero a {
+      display: block;
+      border-radius: 12px;
+    }
+    .hero img {
+      width: 100%;
+      border-radius: 12px;
+      transition: transform 0.2s;
+    }
+    .hero img:hover {
+      transform: scale(1.01);
+    }
+    .cta-bottom {
+      margin: 40px auto;
+    }
+    .cta-bottom a {
+      display: inline-block;
+      background: #ff5c00;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+      padding: 14px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .cta-bottom a:hover {
+      background: #e04f00;
+    }
+    .steps {
+      margin: 40px 0;
+    }
+    .steps h2 {
+      margin-bottom: 20px;
+    }
+    .step {
+      margin-bottom: 10px;
+    }
+    .about {
+      max-width: 600px;
+      margin: 0 auto 40px;
+      padding: 0 20px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .testimonial {
+      background: white;
+      padding: 30px;
+      margin: 0 auto 40px;
+      max-width: 480px;
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+      font-style: italic;
+    }
+    footer {
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    a {
+      color: #007aff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>ContentBot™ — Пишет. Как ты. За тебя.</header>
+
+  <div class="hero">
+    <a href="https://buy.stripe.com/dRmfZg6e0cdxcWq1pR6Na06" target="_blank" onclick="trackCheckoutClick()">
+      <img src="https://i.imgur.com/VhZNOqu.jpeg" alt="ContentBot — AI That Writes Like You">
+    </a>
+  </div>
+
+  <section class="steps">
+    <h2>Как это работает?</h2>
+    <div class="step">1. Пишешь тему или загружаешь задачу</div>
+    <div class="step">2. ContentBot™ придумывает цепляющий пост</div>
+    <div class="step">3. Через 1–2 минуты — готовый текст в твоей интонации</div>
+  </section>
+
+  <section class="about">
+    Это не просто ChatGPT. Это ContentBot™ — агент, который пишет в твоей интонации, без штампов и канцелярщины. Он понимает контекст, стиль, и говорит как ты — но быстрее.
+  </section>
+
+  <div class="testimonial">
+    @suki.marketing, Сингапур: <br>
+    “Тестировала ради интереса — за 3 минуты пришёл пост лучше, чем мой копирайтер делал за день. Это как реклама в Токио: коротко, точно, с характером.”
+  </div>
+
+  <div class="cta-bottom">
+    <a href="https://buy.stripe.com/dRmfZg6e0cdxcWq1pR6Na06" target="_blank" onclick="trackCheckoutClick()">Купить за 9,99 €</a>
+  </div>
+
+  <footer>
+    <a href="https://buy.stripe.com/dRmfZg6e0cdxcWq1pR6Na06" target="_blank">9,99 €</a> против творческих мук. <a href="https://t.me/VPuziryov" target="_blank">@VPuziryov</a>
+  </footer>
+</body>
+</html>
