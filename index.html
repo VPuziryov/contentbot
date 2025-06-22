@@ -25,7 +25,12 @@
   <script>
     function trackCheckoutClick() {
       if (typeof fbq === 'function') {
-        fbq('track', 'InitiateCheckout');
+        fbq('track', 'InitiateCheckout', {
+          content_name: 'ContentBot',
+          content_category: 'GPT Agent',
+          value: 9.99,
+          currency: 'EUR'
+        });
       }
     }
   </script>
