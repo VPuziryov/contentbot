@@ -23,17 +23,23 @@
   <!-- End Facebook Pixel Code -->
 
   <script>
-    function trackCheckoutClick() {
-      if (typeof fbq === 'function') {
-        fbq('track', 'InitiateCheckout', {
-          value: 9.99,
-          currency: 'EUR',
-          content_name: 'ContentBot'
-        });
-        fbq('trackCustom', 'Checkout_ContentBot');
-      }
+  function trackCheckoutClick() {
+    if (typeof fbq === 'function') {
+      fbq('track', 'InitiateCheckout', {
+        value: 9.99,
+        currency: 'EUR',
+        content_name: 'ContentBot'
+      });
+      fbq('trackCustom', 'Checkout_ContentBot');
     }
-  </script>
+  }
+
+  function trackChecklistDownload() {
+    if (typeof fbq === 'function') {
+      fbq('trackCustom', 'ContentBotChecklistDownload');
+    }
+  }
+</script>
 
   <style>
     body {
@@ -156,9 +162,11 @@
   <p style="font-size: 1rem; line-height: 1.6; color: #333;">
     Пошаговая инструкция, примеры запросов и лайфхаки. Всё в одном PDF — удобно сохранить или переслать коллеге.
   </p>
-  <a href="ContentBot™_how to use.pdf" target="_blank" style="display: inline-block; margin-top: 20px; background: #007aff; color: #fff; padding: 12px 24px; border-radius: 8px; font-weight: bold; text-decoration: none;">
-    📥 Скачать чек-лист (PDF)
-  </a>
+ <a href="ContentBot™_how to use.pdf" target="_blank"
+   onclick="trackChecklistDownload()"
+   style="display: inline-block; margin-top: 20px; background: #007aff; color: #fff; padding: 12px 24px; border-radius: 8px; font-weight: bold; text-decoration: none;">
+  📥 Скачать чек-лист (PDF)
+</a>
 </section>
   
   <footer>
