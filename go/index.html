@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ContentBot™ — AI-помощник для постов</title>
+
+  <!-- Facebook Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){
+    if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '3153750001397422');
+    fbq('track', 'PageView');
+  </script>
+
+  <script>
+  function trackCheckoutClick() {
+    if (typeof fbq === 'function') {
+      fbq('track', 'InitiateCheckout', {
+        value: 9.99,
+        currency: 'EUR',
+        content_name: 'ContentBot'
+      });
+    }
+  }
+
+  function trackChecklistDownload() {
+    if (typeof fbq === 'function') {
+      fbq('trackCustom', 'ContentBotChecklistDownload');
+    }
+  }
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #f5f6fa;
+      color: #111;
+      text-align: center;
+    }
+    header {
+      padding: 20px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .hero {
+      background: white;
+      padding: 40px 20px;
+      border-radius: 16px;
+      margin: 20px auto;
+      max-width: 480px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+    .hero img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    .cta-bottom {
+      margin: 40px auto;
+    }
+    .cta-bottom a {
+      display: inline-block;
+      background: #ff5c00;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+      padding: 14px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+    }
+    .cta-bottom a:hover {
+      background: #e04f00;
+    }
+    .steps {
+      margin: 40px 0;
+    }
+    .about {
+      max-width: 600px;
+      margin: 0 auto 40px;
+      padding: 0 20px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .testimonial {
+      background: white;
+      padding: 30px;
+      margin: 0 auto 40px;
+      max-width: 480px;
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>ContentBot™ — Пишет. Как ты. За тебя.</header>
+
+<div class="hero">
+  <!-- УБРАЛИ ССЫЛКУ -->
+  <img src="https://i.imgur.com/VhZNOqu.jpeg">
+</div>
+
+<section class="steps">
+  <h2>Как это работает?</h2>
+  <div>1. Пишешь тему или задачу</div>
+  <div>2. ContentBot пишет пост</div>
+  <div>3. Через 1–2 минуты — готовый текст</div>
+</section>
+
+<section class="about">
+  Готовый пост за 2 минуты вместо часа тупняка с ChatGPT.
+</section>
+
+<div class="testimonial">
+  “Сэкономил час. Текст сразу зашёл.”
+</div>
+
+<div class="cta-bottom">
+  <a href="/go/" onclick="trackCheckoutClick()">Получить доступ</a>
+</div>
+
+<section class="steps" style="background: white; padding: 60px 20px; margin: 24px auto; max-width: 600px; border-radius: 16px;">
+  <h2>📘 Чек-лист</h2>
+
+  <a href="ContentBot™_how to use.pdf"
+     target="_blank"
+     onclick="trackChecklistDownload()">
+     Скачать PDF
+  </a>
+</section>
+
+<footer>
+  9,99 € · <a href="https://t.me/VPuziryov" target="_blank">@VPuziryov</a>
+</footer>
+
+</body>
+</html>
