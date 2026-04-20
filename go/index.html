@@ -15,20 +15,19 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
+
     fbq('init', '3153750001397422');
 
-    // событие перед редиректом
+    // ГАРАНТИРОВАННАЯ отправка события
     fbq('track', 'InitiateCheckout', {
       value: 15,
       currency: 'EUR'
     });
-  </script>
 
-  <script>
-    // редирект через 0.5 сек
+    // редирект после задержки
     setTimeout(function() {
       window.location.href = "https://buy.stripe.com/dRmfZg6e0cdxcWq1pR6Na06";
-    }, 500);
+    }, 600);
   </script>
 
   <style>
