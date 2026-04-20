@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ContentBot™ — AI-помощник для постов</title>
-  <!-- Facebook Pixel Code -->
+  <title>ContentBot™ — инструмент для постов через GPT</title>
+
+  <!-- Facebook Pixel -->
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    !function(f,b,e,v,n,t,s){
+    if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
     if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
     n.queue=[];t=b.createElement(e);t.async=!0;
@@ -17,29 +18,17 @@
     fbq('init', '3153750001397422');
     fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=3153750001397422&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Facebook Pixel Code -->
 
   <script>
   function trackCheckoutClick() {
     if (typeof fbq === 'function') {
       fbq('track', 'InitiateCheckout', {
-        value: 9.99,
-        currency: 'EUR',
-        content_name: 'ContentBot'
+        value: 15,
+        currency: 'EUR'
       });
-      fbq('trackCustom', 'Checkout_ContentBot');
     }
   }
-
-  function trackChecklistDownload() {
-    if (typeof fbq === 'function') {
-      fbq('trackCustom', 'ContentBotChecklistDownload');
-    }
-  }
-</script>
+  </script>
 
   <style>
     body {
@@ -50,34 +39,26 @@
       text-align: center;
     }
     header {
-      padding: 20px;
+      padding: 16px;
       font-weight: bold;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
     }
     .hero {
       background: white;
-      padding: 40px 20px;
+      padding: 20px;
       border-radius: 16px;
-      margin: 20px auto;
+      margin: 10px auto;
       max-width: 480px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-    }
-    .hero a {
-      display: block;
-      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
     }
     .hero img {
       width: 100%;
       border-radius: 12px;
-      transition: transform 0.2s;
     }
-    .hero img:hover {
-      transform: scale(1.01);
+    .cta {
+      margin: 18px 0;
     }
-    .cta-bottom {
-      margin: 40px auto;
-    }
-    .cta-bottom a {
+    .cta a {
       display: inline-block;
       background: #ff5c00;
       color: white;
@@ -86,92 +67,136 @@
       padding: 14px 28px;
       border-radius: 12px;
       text-decoration: none;
-      transition: background 0.2s;
     }
-    .cta-bottom a:hover {
-      background: #e04f00;
+    .cta small {
+      display: block;
+      margin-top: 6px;
+      color: #666;
+      font-size: 0.9rem;
     }
-    .steps {
-      margin: 40px 0;
+    .block {
+      margin: 22px auto;
+      max-width: 520px;
+      padding: 0 16px;
     }
-    .steps h2 {
-      margin-bottom: 20px;
-    }
-    .step {
-      margin-bottom: 10px;
-    }
-    .about {
-      max-width: 600px;
-      margin: 0 auto 40px;
-      padding: 0 20px;
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    .testimonial {
+    .box {
       background: white;
-      padding: 30px;
-      margin: 0 auto 40px;
-      max-width: 480px;
+      padding: 18px;
       border-radius: 16px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.04);
-      font-style: italic;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      margin-top: 12px;
+      text-align: left;
     }
     footer {
-      padding: 20px;
+      margin: 20px;
       font-size: 0.9rem;
-      color: #666;
-    }
-    a {
-      color: #007aff;
-      text-decoration: none;
+      color: #777;
     }
   </style>
 </head>
-<body>
-  <header>ContentBot™ — Пишет. Как ты. За тебя.</header>
 
-  <div class="hero">
-    <a href="https://buy.stripe.com/dRmfZg6e0cdxcWq1pR6Na06" target="_blank" onclick="trackCheckoutClick()">
-      <img src="https://i.imgur.com/VhZNOqu.jpeg" alt="ContentBot — AI That Writes Like You">
+<body>
+
+<header>ContentBot™ — инструмент для написания постов через GPT</header>
+
+<div class="hero">
+  <img src="images/hero.jpg" alt="ContentBot">
+</div>
+
+<!-- PWA ощущение -->
+<div class="block">
+  <div class="box" style="text-align:center;">
+    Открывается как отдельный инструмент — можно добавить на экран телефона
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta">
+  <a href="/go/" onclick="trackCheckoutClick()">Открыть ContentBot — 15 €</a>
+  <small>Разовый платёж · Без подписки</small>
+</div>
+
+<!-- Что получаешь -->
+<div class="block">
+  <strong>Что ты получаешь</strong>
+  <div class="box">
+    • доступ к ContentBot (отдельная страница-инструмент)<br>
+    • готовый способ получать посты через GPT<br>
+    • структуру поста (заголовок → смысл → CTA)<br>
+    • примеры<br>
+    • инструкцию
+  </div>
+</div>
+
+<!-- Как работает -->
+<div class="block">
+  <strong>Как это работает</strong>
+  <div class="box">
+    1. Пишешь тему<br>
+    2. Получаешь готовый текст<br>
+    3. Копируешь и публикуешь
+  </div>
+</div>
+
+<!-- Пример 1 -->
+<div class="block">
+  <strong>Пример результата</strong>
+  <div class="box">
+    <b>ПЕРВЫЕ клиенты — страшно, стыдно, НО МОЖНО!</b><br><br>
+    Я просто написала, что могу помочь.<br>
+    Без сайта. Без упаковки.<br><br>
+    Через неделю — 3 заявки.<br>
+    Через месяц — очередь.<br><br>
+    Хочешь клиентов? Скажи миру, чем ты полезен.
+  </div>
+</div>
+
+<!-- Пример 2 -->
+<div class="block">
+  <div class="box">
+    <b>НЕ СМЕЙ ПРОДАВАТЬ!</b><br><br>
+    Именно так звучит страх.<br><br>
+    Но правда в том, что продажи — это забота.<br><br>
+    Когда ты объясняешь — люди покупают сами.
+  </div>
+</div>
+
+<!-- PDF -->
+<div class="block">
+  <strong>Инструкция + примеры</strong>
+  <div class="box">
+    Как писать запросы, чтобы получать нормальные посты<br><br>
+    <a href="ContentBot™_how to use.pdf" target="_blank">
+      Открыть PDF
     </a>
   </div>
+</div>
 
-  <section class="steps">
-    <h2>Как это работает?</h2>
-    <div class="step">1. Пишешь тему или загружаешь задачу</div>
-    <div class="step">2. ContentBot™ придумывает цепляющий пост</div>
-    <div class="step">3. Через 1–2 минуты — готовый текст в твоей интонации</div>
-  </section>
+<!-- CTA 2 -->
+<div class="cta">
+  <a href="/go/" onclick="trackCheckoutClick()">Открыть ContentBot — 15 €</a>
+  <small>Разовый платёж · Без подписки</small>
+</div>
 
-  <section class="about">
-    Это не просто ChatGPT. Это ContentBot™ — агент, который пишет в твоей интонации, без штампов и канцелярщины. Он понимает контекст, стиль, и говорит как ты — но быстрее.
-  </section>
+<!-- Дожим -->
+<div style="margin-top: 18px; font-size: 0.95rem; color: #555; line-height: 1.6;">
 
-  <div class="testimonial">
-    @suki.marketing, Сингапур: <br>
-    “Тестировала ради интереса — за 3 минуты пришёл пост лучше, чем мой копирайтер делал за день. Это как реклама в Токио: коротко, точно, с характером.”
-  </div>
+  Платёж через Stripe — безопасно<br><br>
 
-    
-  <div class="cta-bottom">
-    <a href="https://buy.stripe.com/dRmfZg6e0cdxcWq1pR6Na06" target="_blank" onclick="trackCheckoutClick()">Купить за 9,99 €</a>
-  </div>
+  После оплаты вы сразу получаете:<br>
+  • доступ к ContentBot<br>
+  • инструмент для написания постов<br>
+  • пример<br>
+  • инструкцию<br><br>
 
-  <section class="steps" style="background: white; padding: 60px 20px; margin: 24px auto; max-width: 600px; border-radius: 16px; box-shadow: 0 6px 16px rgba(0,0,0,0.05);">
-  <h2 style="margin-bottom: 20px;">📘 Чек-лист: как пользоваться ContentBot™</h2>
-  <p style="font-size: 1rem; line-height: 1.6; color: #333;">
-    Пошаговая инструкция, примеры запросов и лайфхаки. Всё в одном PDF — удобно сохранить или переслать коллеге.
-  </p>
- <a href="ContentBot™_how to use.pdf" target="_blank"
-   onclick="trackChecklistDownload()"
-   style="display: inline-block; margin-top: 20px; background: #007aff; color: #fff; padding: 12px 24px; border-radius: 8px; font-weight: bold; text-decoration: none;">
-  📥 Скачать чек-лист (PDF)
-</a>
-</section>
-  
-  <footer>
-    <a href="https://buy.stripe.com/dRmfZg6e0cdxcWq1pR6Na06" target="_blank">9,99 €</a> против творческих мук. <a href="https://t.me/VPuziryov" target="_blank">@VPuziryov</a>
-  </footer>
+  Есть вопрос?<br>
+  <a href="https://t.me/VPuziryov" target="_blank">@VPuziryov</a>
+
+</div>
+
+<footer>
+  © ContentBot
+</footer>
 
 </body>
 </html>
